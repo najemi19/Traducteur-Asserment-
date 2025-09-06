@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الأستاذ المحلف محمد حساني — خدمات الترجمة القانونية والرسمية</title>
+  <meta name="description" content="الأستاذ المحلف محمد حساني — مترجم معتمد في الترجمة القانونية والرسمية والمعتمدة لدى المحاكم. وسام الاستحقاق الوطني من الدرجة الممتازة، الإجازة في الحقوق، الإجازة في الشريعة الإسلامية، وشهادة الترجمة القضائية." />
+  <meta name="theme-color" content="#0a2a43" />
+  <meta property="og:title" content="الأستاذ المحلف محمد حساني — مترجم معتمد" />
+  <meta property="og:description" content="ترجمة قانونية ورسمية معتمدة لدى المحاكم — دقة، سرعة، وسرية." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_AR" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --text:#222;
+      --muted:#6a7483;
+      --primary:#0a2a43;
+      --primary-2:#123a5d;
+      --gold:#c9a227;
+      --gold-soft:#e9d79a;
+      --card:#ffffff;
+      --shadow:0 12px 30px rgba(10,42,67,.12);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:'Cairo',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#f8fafc 0%, #f1f5f9 30%, #eef2f7 100%);
+      color:var(--text);
+      line-height:1.8;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--primary);text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    /* Navbar */
+    .nav{
+      position:sticky;top:0;z-index:1000;
+      backdrop-filter:saturate(160%) blur(8px);
+      background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.7));
+      border-bottom:1px solid rgba(12,29,43,.08);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:40px;height:40px;border-radius:50%;
+      background: radial-gradient(120% 120% at 30% 20%, #ffec9a, #b38a16 40%, #7a6311 70%);
+      display:grid;place-items:center;color:#1a1d23;font-weight:800;border:1px solid rgba(255,215,0,.5);
+      box-shadow:0 4px 10px rgba(201,162,39,.25);
+    }
+    .brand-title{font-weight:800;color:var(--primary);letter-spacing:.2px}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+    .chip{
+      background:#fff;border:1px solid rgba(12,29,43,.08);
+      padding:8px 12px;border-radius:999px;color:#1d2a35;font-weight:600;
+      transition:.3s;display:inline-flex;align-items:center;gap:8px
+    }
+    .chip:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.06)}
+    /* Hero */
+    .hero{
+      position:relative;overflow:hidden;
+      background: radial-gradient(120% 120% at 70% 10%,#123a5d 0,#0a2a43 45%,#081b2b 100%);
+      color:#fff;
+    }
+    .hero::after{
+      content:"";position:absolute;inset:0;background:
+        radial-gradient(60% 40% at 80% -10%,rgba(255,215,0,.18),transparent 60%),
+        radial-gradient(40% 30% at 10% 10%,rgba(255,255,255,.08),transparent 60%);
+      pointer-events:none;
+    }
+    .hero-inner{padding:70px 20px 90px;position:relative}
+    .hero h1{margin:0 0 12px;font-size:38px;line-height:1.25;color:#ffdf6e;text-shadow:0 6px 20px rgba(255,215,0,.15)}
+    .hero p.lead{margin:0;color:#dbe7f3;max-width:800px}
+    .badges{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+    .badge{
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+      color:#fff;padding:8px 12px;border-radius:999px;display:inline-flex;gap:8px;align-items:center;font-weight:600
+    }
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+    .hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      appearance:none;border:none;cursor:pointer;font-weight:800;letter-spacing:.2px;
+      padding:12px 18px;border-radius:12px;display:inline-flex;align-items:center;gap:10px;transition:.25s
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#f8e9a0,#c9a227);color:#1a1c20;
+      box-shadow:0 12px 26px rgba(201,162,39,.28)
+    }
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
+    .wave{position:absolute;bottom:-1px;left:0;right:0}
+    /* Sections */
+    section{padding:56px 0}
+    .card{
+      background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+      border:1px solid rgba(12,29,43,.06)
+    }
+    .grid{display:grid;gap:20px}
+    @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    h2{margin:0 0 18px;color:var(--primary);font-weight:800}
+    .muted{color:var(--muted)}
+    .list{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+    .list li{display:flex;align-items:flex-start;gap:10px}
+    .check{color:var(--gold);font-weight:800}
+    /* Pricing */
+    .price-card{padding:22px;border:1px solid rgba(12,29,43,.08)}
+    .price-card.popular{border-color:var(--gold);box-shadow:0 14px 34px rgba(201,162,39,.18)}
+    .price{font-weight:800;font-size:28px;color:#12161a}
+    .price small{color:var(--muted);font-weight:600}
+    .table{width:100%;border-collapse:collapse}
+    .table th,.table td{border:1px solid rgba(12,29,43,.08);padding:12px;text-align:center}
+    .table th{background:linear-gradient(180deg,#0a2a43,#123a5d);color:#fff}
+    /* Testimonials */
+    .slider{position:relative;overflow:hidden}
+    .slides{display:flex;gap:20px;transition:transform .6s ease}
+    .testimonial{min-width:280px;flex:0 0 100%;padding:20px;border-right:1px dashed rgba(12,29,43,.06)}
+    @media(min-width:720px){.testimonial{flex:0 0 calc(50% - 10px)}}
+    @media(min-width:1024px){.testimonial{flex:0 0 calc(33.333% - 13.5px)}}
+    blockquote{margin:0}
+    .stars{color:#f1c40f;letter-spacing:1px}
+    /* FAQ */
+    details{border:1px solid rgba(12,29,43,.08);border-radius:12px;padding:14px 16px;background:#fff}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:700;color:#0a2a43}
+    /* Contact */
+    .contact-card{display:grid;gap:16px}
+    .contact-row{display:grid;gap:14px}
+    @media(min-width:900px){.contact-row{grid-template-columns:1.1fr 1fr}}
+    .info-line{display:flex;align-items:center;gap:10px}
+    .map{width:100%;height:340px;border:0;border-radius:14px;box-shadow:var(--shadow)}
+    /* Floating actions */
+    .fab{
+      position:fixed;right:18px;bottom:18px;z-index:999;display:flex;flex-direction:column;gap:10px
+    }
+    .fab a{
+      display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;
+      padding:12px 14px;border-radius:999px;box-shadow:0 12px 24px rgba(0,0,0,.18);transition:.25s
+    }
+    .fab a:hover{transform:translateY(-2px)}
+    .fab .wa{background:#25d366}
+    .fab .call{background:#0a2a43}
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1;transform:none}
+    footer{
+      background:#0a2a43;color:#d7e3ee;padding:26px 0;margin-top:10px;
+      border-top:1px solid rgba(255,255,255,.08)
+    }
+    .foot-inner{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+    .copyright{color:#bcd0e3}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"الأستاذ المحلف محمد حساني",
+    "description":"مترجم معتمد — ترجمة قانونية ورسمية معتمدة لدى المحاكم.",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"شارع المرابطين، حي ولي العهد رقم 47",
+      "addressLocality":"إنزكان",
+      "addressCountry":"MA"
+    },
+    "telephone":"+212668122773",
+    "priceRange":"درهم",
+    "areaServed":"MA"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav" aria-label="الشريط العلوي">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">MH</div>
+        <div>
+          <div class="brand-title">الأستاذ المحلف محمد حساني</div>
+          <div class="muted" style="font-size:12px">مترجم معتمد — ترجمة قانونية ورسمية</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a class="chip" href="#about">تعريف</a>
+        <a class="chip" href="#services">الخدمات</a>
+        <a class="chip" href="#pricing">الباقات</a>
+        <a class="chip" href="#tariff">التعريفة</a>
+        <a class="chip" href="#testimonials">الآراء</a>
+        <a class="chip" href="#contact">التواصل</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <h1>ترجمة قانونية ورسمية معتمدة — دقة، سرعة، وسرية</h1>
+      <p class="lead">خدمات ترجمة معتمدة لدى المحاكم والجهات الرسمية، بقيادة الأستاذ المحلف محمد حساني — خبرة طويلة وسمعة راسخة.</p>
+      <div class="badges" aria-label="الاعتمادات والمؤهلات">
+        <span class="badge"><span class="dot"></span> وسام الاستحقاق الوطني — الدرجة الممتازة</span>
+        <span class="badge"><span class="dot"></span> الإجازة في الحقوق</span>
+        <span class="badge"><span class="dot"></span> الإجازة في الشريعة الإسلامية</span>
+        <span class="badge"><span class="dot"></span> شهادة الترجمة القضائية</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/212668122773?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B1%D8%AC%D9%85%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener" aria-label="تواصل واتساب">واتساب مباشر</a>
+        <a class="btn btn-ghost" href="tel:+212668122773" aria-label="اتصال هاتفي">اتصال: 06 68 12 27 73</a>
+      </div>
+    </div>
+    <svg class="wave" height="80" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32 C180,80 360,0 540,24 C720,48 900,96 1080,64 C1260,32 1440,48 1440,48 L1440,80 L0,80 Z" fill="#f6f7fb"></path>
+    </svg>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container grid grid-2">
+      <div class="card reveal" style="padding:22px">
+        <h2>نبذة عن الأستاذ</h2>
+        <p>أكثر من عشرين سنة خبرة في الترجمة القانونية والرسمية المعتمدة. خدمات دقيقة، سريعة، وسرية بالكامل، مع التزام تام بالمعايير المهنية والقانونية.</p>
+        <ul class="list">
+          <li><span class="check">✔</span> اعتماد رسمي لدى المحاكم والجهات الإدارية</li>
+          <li><span class="check">✔</span> التزام بالصياغة القانونية ومصطلحاتها</li>
+          <li><span class="check">✔</span> تسليم مرن وحسب موعدك</li>
+        </ul>
+      </div>
+      <div class="grid reveal" style="gap:16px">
+        <div class="card" style="padding:18px">
+          <strong style="color:var(--primary)">الوسام</strong>
+          <div class="muted">وسام الاستحقاق الوطني — الدرجة الممتازة</div>
+        </div>
+        <div class="card" style="padding:18px">
+          <strong style="color:var(--primary)">الشهادات</strong>
+          <div class="muted">الإجازة في الحقوق — الإجازة في الشريعة الإسلامية — شهادة الترجمة القضائية</div>
+        </div>
+        <div class="card" style="padding:18px">
+          <strong style="color:var(--primary)">الاختصاص</strong>
+          <div class="muted">الوثائق الرسمية، العقود، الأحكام القضائية، والملفات الإدارية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="card" style="padding:22px">
+        <h2>الخدمات</h2>
+        <div class="grid grid-3">
+          <div class="reveal card" style="padding:18px">
+            <h3 style="margin:0 0 6px;color:#15202b">ترجمة قانونية</h3>
+            <p class="muted">عقود، مذكرات، محاضر، أحكام، تشريعات، مرافعات، وصيغ قانونية دقيقة.</p>
+          </div>
+          <div class="reveal card" style="padding:18px">
+            <h3 style="margin:0 0 6px;color:#15202b">ترجمة رسمية</h3>
+            <p class="muted">وثائق الحالة المدنية، الشهادات الدراسية، البيانات البنكية والتجارية.</p>
+          </div>
+          <div class="reveal card" style="padding:18px">
+            <h3 style="margin:0 0 6px;color:#15202b">ترجمة معتمدة</h3>
+            <p class="muted">اعتماد لدى المحاكم والإدارات، مع أختام وصيغ معترف بها رسمياً.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <h2 style="margin-bottom:14px">باقات الاشتراك السنوي</h2>
+      <div class="grid grid-3">
+        <div class="card price-card reveal">
+          <div class="muted">الباقة الأساسية</div>
+          <div class="price">1200 د.م <small>/سنة</small></div>
+          <ul class="list" style="margin-top:10px">
+            <li><span class="check">✔</span> حتى 20 وثيقة سنوياً</li>
+            <li><span class="check">✔</span> دعم عبر واتساب</li>
+            <li><span class="check">✔</span> تسليم خلال 48 ساعة</li>
+          </ul>
+        </div>
+        <div class="card price-card popular reveal">
+          <div class="muted">الباقة المميزة</div>
+          <div class="price">3000 د.م <small>/سنة</small></div>
+          <ul class="list" style="margin-top:10px">
+            <li><span class="check">✔</span> حتى 45 وثيقة سنوياً</li>
+            <li><span class="check">✔</span> أولوية المواعيد</li>
+            <li><span class="check">✔</span> مراجعة لغوية متقدمة</li>
+          </ul>
+        </div>
+        <div class="card price-card reveal">
+          <div class="muted">الباقة الذهبية</div>
+          <div class="price">6000 د.م <small>/سنة</small></div>
+          <ul class="list" style="margin-top:10px">
+            <li><span class="check">✔</span> ترجمة غير محدودة</li>
+            <li><span class="check">✔</span> استشارة قانونية مصطلحية</li>
+            <li><span class="check">✔</span> تسليم مستعجل</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Tariff -->
+  <section id="tariff">
+    <div class="container">
+      <div class="card" style="padding:22px">
+        <h2>تعريفة ترجمة الوثائق الرسمية</h2>
+        <div class="grid grid-2" style="align-items:start">
+          <div class="reveal">
+            <table class="table" aria-label="تعريفة الوثائق">
+              <thead>
+                <tr><th>نوع الوثيقة</th><th>الثمن بالدرهم</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>عقد الزواج</td><td>150</td></tr>
+                <tr><td>عقد الطلاق</td><td>200</td></tr>
+                <tr><td>عقد الازدياد</td><td>100</td></tr>
+                <tr><td>عقد الوفاة</td><td>100</td></tr>
+                <tr><td>شهادة الحياة</td><td>100</td></tr>
+                <tr><td>شهادة السكنى</td><td>100</td></tr>
+                <tr><td>السجل العدلي</td><td>150</td></tr>
+                <tr><td>البطاقة الوطنية</td><td>100</td></tr>
+                <tr><td>جواز السفر</td><td>150</td></tr>
+                <tr><td>رخصة السياقة</td><td>150</td></tr>
+                <tr><td>الشهادات الدراسية</td><td>150</td></tr>
+                <tr><td>الدبلومات</td><td>200</td></tr>
+                <tr><td>عقود الشركات</td><td>ابتداءً من 1000</td></tr>
+                <tr><td>الأحكام القضائية</td><td>ابتداءً من 500</td></tr>
+                <tr><td>الوثائق البنكية والتجارية</td><td>ابتداءً من 500</td></tr>
+                <tr><td>عقود الكراء / البيع</td><td>ابتداءً من 600</td></tr>
+                <tr><td>الإشهادات والتعهدات</td><td>ابتداءً من 400</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="reveal card" style="padding:16px;background:linear-gradient(180deg,#fff7d6,#fff)">
+            <strong style="color:#5a4512;display:block;margin-bottom:6px">ملاحظة مهمة</strong>
+            <p class="muted" style="margin:0">الأسعار المشار إليها للوثائق القياسية. قد تختلف وفق عدد الصفحات، التعقيد، أو لغة المصدر/الهدف. ستحصل على عرض سعر دقيق بعد معاينة الوثائق.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>آراء العملاء</h2>
+      <div class="card slider reveal" style="padding:0">
+        <div class="slides" id="slides">
+          <div class="testimonial" style="background:#fff">
+            <blockquote>
+              <div class="stars">★★★★★</div>
+              <p>خدمة احترافية وتعامل راقٍ. الترجمة دقيقة والتسليم سريع.</p>
+              <small class="muted">عميل موثق</small>
+            </blockquote>
+          </div>
+          <div class="testimonial" style="background:#fff">
+            <blockquote>
+              <div class="stars">★★★★★</div>
+              <p>تعامل ممتاز ومصداقية عالية. أنصح به بشدة.</p>
+              <small class="muted">مؤسسة شريكة</small>
+            </blockquote>
+          </div>
+          <div class="testimonial" style="background:#fff">
+            <blockquote>
+              <div class="stars">★★★★★</div>
+              <p>تنسيق قانوني سليم واعتماد رسمي بدون أي ملاحظات.</p>
+              <small class="muted">محامٍ شريك</small>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="card" style="padding:22px">
+        <h2>الأسئلة الشائعة</h2
+                <details class="reveal">
+          <summary>هل الترجمة معتمدة لدى جميع المحاكم؟</summary>
+          <p>نعم، جميع الترجمات مختومة وموقعة من طرف الأستاذ المحلف محمد حساني، ومعتمدة لدى المحاكم والجهات الرسمية.</p>
+        </details>
+        <details class="reveal">
+          <summary>كم يستغرق إنجاز الترجمة؟</summary>
+          <p>عادةً يتم التسليم خلال 24 إلى 48 ساعة للوثائق القياسية، مع إمكانية التسليم المستعجل عند الطلب.</p>
+        </details>
+        <details class="reveal">
+          <summary>هل يمكن إرسال الوثائق عبر الإنترنت؟</summary>
+          <p>نعم، يمكن إرسال الوثائق عبر البريد الإلكتروني أو واتساب، مع الحفاظ على السرية التامة.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>معلومات الاتصال</h2>
+      <div class="contact-row">
+        <div class="contact-card reveal card" style="padding:22px">
+          <div class="info-line">📍 <span>شارع المرابطين، حي ولي العهد رقم 47، إنزكان — قرب مسجد الإمام مالك</span></div>
+          <div class="info-line">📞 <a href="tel:+212668122773">06 68 12 27 73</a></div>
+          <div class="info-line">☎ <a href="tel:+212528836663">05 28 83 66 63</a></div>
+          <div class="info-line">🟢 <a href="https://wa.me/212668122773" target="_blank" rel="noopener">تواصل عبر واتساب</a></div>
+        </div>
+        <div class="reveal">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2913.8859372484126!2d-9.539089!3d30.3546924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c7005195c229%3A0x4b82fbad2d8a5093!2sMaitre%20HASSANI%20Mohamed!5e1!3m2!1sar!2sma!4v1756798977899!5m2!1sar!2sma" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab" aria-label="أزرار تواصل سريعة">
+    <a class="wa" href="https://wa.me/212668122773" target="_blank" rel="noopener">💬 واتساب</a>
+    <a class="call" href="tel:+212668122773">📞 اتصال</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container foot-inner">
+      <div class="copyright">
+        © 2025 جميع الحقوق محفوظة — مركز SmartMarket Pro
+      </div>
+      <div>تصميم وتنفيذ: <strong>نسخة فاخرة</strong></div>
+    </div>
+  </footer>
+
+  <script>
+    // كشف العناصر عند التمرير
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.9;
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) el.classList.add('in');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
+<script src="script.js" defer></script>
+</body>
+</html>
+
